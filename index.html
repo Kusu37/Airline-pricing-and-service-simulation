@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Airline Pricing Simulation</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Airline Pricing and Service Simulation</h1>
+  </header>
+
+  <main>
+    <div id="controls">
+      <h2>Adjust Pricing and Services</h2>
+      <label for="priceChange">Price Change:</label>
+      <input type="range" id="priceChange" min="-1" max="1" step="1" value="0">
+      <span id="priceChangeValue">0</span>
+
+      <label for="customerType">Customer Type:</label>
+      <select id="customerType">
+        <option value="business">Business</option>
+        <option value="leisure">Leisure</option>
+      </select>
+
+      <label for="services">Select Services:</label>
+      <select id="services" multiple>
+        <option value="priority_boarding">Priority Boarding</option>
+        <option value="vip_lounge_access">VIP Lounge Access</option>
+        <option value="extra_legroom_seat">Extra Legroom Seat</option>
+        <option value="wifi">WiFi</option>
+        <!-- Add more services here -->
+      </select>
+
+      <button id="applyAction">Apply Changes</button>
+    </div>
+
+    <div id="status">
+      <h2>Current Flight Status</h2>
+      <p id="seatInfo">Seats Left: Economy - 100, Business - 0, First Class - 0</p>
+      <p id="priceInfo">Prices: Economy - $100, Business - $100, First Class - $100</p>
+      <p id="promotionInfo">Promotion: None</p>
+      <p id="timeInfo">Time to Departure: 100 days</p>
+    </div>
+
+    <div id="log">
+      <h2>Log</h2>
+      <ul id="logList"></ul>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Airline Simulation</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
